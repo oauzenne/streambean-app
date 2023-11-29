@@ -93,6 +93,9 @@ const ContentPage = () => {
           </Button>
         ))}
       </section>
+      <section className="link-section">
+        <Button class="link-button">meet.streambean.ai/TheManifestCodex</Button>
+      </section>
       <section className="patent-notice">
         <Typography>
           Patent and Trademark Notice: This notice serves as a warning that this
