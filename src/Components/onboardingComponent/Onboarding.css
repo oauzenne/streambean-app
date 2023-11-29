@@ -11,6 +11,7 @@
 
 .css-1f5ro5o-MuiButtonBase-root-MuiButton-root {
   background-color: green !important;
+  border-radius: 20px !important;
 }
 
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {

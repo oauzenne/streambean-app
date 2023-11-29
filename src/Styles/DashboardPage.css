@@ -13,8 +13,11 @@
 }
 
 .content-container {
-  width: 68%;
+  width: 65%;
   background-color: lightgray;
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .sidebar-container {
@@ -32,6 +35,10 @@
   font-size: 2em;
   margin-bottom: 0px;
   margin-top: 0px;
+}
+
+.dollar-amount {
+  color: green;
 }
 
 .welcome,
@@ -192,4 +199,84 @@
 .onboarding-bottom {
   align-items: flex-end;
   justify-content: center;
+}
+
+.quick-click-button,
+.quick-click-button-room,
+.metric-button {
+  color: white;
+  border: none;
+  border-radius: 7px;
+  width: 275px;
+  height: 150px;
+  margin: 20px;
+  flex-shrink: 1;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.11);
+  cursor: pointer;
+}
+
+.metric-button {
+  height: 170px;
+}
+
+.quick-click-button-room {
+  background-color: green;
+}
+
+.quick-button-section,
+.metrics-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quick-click-icon,
+.quick-click-icon-room {
+  color: green;
+  font-size: 2.7em !important;
+}
+
+.quick-click-icon-room {
+  color: white;
+}
+
+.quick-button-text,
+.metric-button-text,
+.metric-button-text-2 {
+  color: black;
+  font-size: 1.2em;
+}
+
+.metric-button-text {
+  font-size: 3em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.quick-button-text-room {
+  font-size: 1.2em;
+}
+
+.metric-text {
+  color: black;
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.patent-notice {
+  padding: 20px;
+  color: grey;
+}
+
+.beta-img {
+  width: 70px;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+.beta-section {
+  position: relative;
+  height: 200px;
 }
