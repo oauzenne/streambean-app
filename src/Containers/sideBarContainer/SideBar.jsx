@@ -1,14 +1,21 @@
 import React from "react";
-import "../../Styles/DashboardPage.css"
-
+import "../../Styles/DashboardPage.css";
+import Onboarding from "../../Components/onboardingComponent/Onboarding";
+import SBLogo from "../../Images/sb-logo.png";
 
 const SideBarPage = () => {
   return (
-    // <section className="sidebar-container">
-      <div className="sidebar-container">
-        <h3>Side Bar Vertical</h3>
-      </div>
-    // </section>
+    <div className="sidebar-container">
+      <section className="onboarding-top">
+        <text className="onboarding-text">Onboarding Center</text>
+      </section>
+      <section>
+        <Onboarding />
+      </section>
+      <section className="onboarding-bottom">
+        <img src={SBLogo} className="sb-logo" />
+      </section>
+    </div>
   );
 };
 

@@ -1,0 +1,30 @@
+.onboarding-section {
+  background-color: white;
+  margin: 25px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: green !important;
+}
+
+.css-1f5ro5o-MuiButtonBase-root-MuiButton-root {
+  background-color: green !important;
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
+  color: green !important;
+}
+
+.css-18st3fs-MuiButtonBase-root-MuiButton-root {
+  color: grey !important;
+}
+
+.onboarding-graphic {
+  width: 185px;
+  height: 135px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  max-width: 100%;
+}
