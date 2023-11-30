@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+:root {
+  --dark-green: #0f391f;
+  --lime-green: #6fb204;
+  --light-gray: #f4f4f4;
+  --dark-gray: #9e9e9e;
+}
 
 .dashboard-container {
   display: flex;
@@ -8,21 +15,20 @@
 }
 
 .tab-container {
-  width: 15%;
+  width: 20%;
   background-color: white;
 }
 
 .content-container {
-  width: 65%;
-  background-color: lightgray;
+  width: 64%;
+  background-color: var(--light-gray);
   padding-top: 60px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .sidebar-container {
-  width: 18%;
-  background-color: #003a08;
+  background-color: var(--dark-green);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -35,22 +41,29 @@
   font-size: 2em;
   margin-bottom: 0px;
   margin-top: 0px;
+  color: var(--dark-green);
 }
 
 .dollar-amount {
-  color: green;
+  color: var(--lime-green);
 }
 
 .welcome,
 .total-text {
   text-align: left;
-  padding: 0px 0px 0px 20px;
+  padding: 10px 0px 0px 20px;
   font-size: 1em;
   margin-top: 0px;
+  font-weight: 200;
+  color: var(--dark-green);
 }
 
-.dollar-amount,
 .total-text {
+  text-align: right;
+  padding: 10px 20px 0px 0px;
+}
+
+.dollar-amount {
   text-align: right;
   padding: 0px 20px 0px 0px;
 }
@@ -75,22 +88,25 @@
 .logo {
   width: 100px;
   height: 100px;
-  margin-top: 60px;
+  margin-top: 52px;
 }
 
 .username {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 1.5em;
+  color: var(--dark-green);
 }
 
 .companyname {
-  margin-top: 0px;
+  margin-top: 15px;
   font-size: 0.7em;
+  font-weight: 200;
+  color: var(--dark-green);
 }
 
 .button-section {
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -99,13 +115,13 @@
 }
 
 .rounded-rectangle-button {
-  background-color: lightgray;
-  background-color: lightgray;
-  padding: 20px 20px;
+  background-color: var(--light-gray);
+  background-color: var(--light-gray);
+  padding: 20px;
   border: none;
-  border-radius: 30px;
+  border-radius: 100px;
   cursor: pointer;
-  width: 220px;
+  width: 265px;
   height: 50px;
   align-items: center;
   display: flex;
@@ -117,14 +133,17 @@
   width: 25px;
   height: 25px;
   display: flex;
-  color: green;
+  color: var(--dark-green);
 }
 
 .button-text {
-  color: green;
+  color: var(--dark-green);
   display: flex;
   font-size: 1.1em;
+  font-family: "Comfortaa", sans-serif;
   padding-left: 10px;
+  max-width: 100%;
+  color: var(--dark-green);
 }
 
 .logout-section {
@@ -132,8 +151,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: grey;
-  padding-top: 125px;
+  color: var(--dark-gray);
+  padding-top: 170px;
 }
 
 .copyright-section {
@@ -141,11 +160,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: grey;
+  color: var(--dark-gray);
 }
 
 .copyright-text {
   font-size: 0.8em;
+  font-family: "Comfortaa", sans-serif;
 }
 
 .copyright-icon {
@@ -155,24 +175,27 @@
 
 .logout-text {
   padding-left: 5px;
-  color: gray;
+  color: var(--dark-gray);
   font-size: 1.2em;
   text-transform: none;
 }
 
 .logout-icon {
-  color: grey;
+  color: var(--dark-gray);
+  margin-left: 8px;
+  font-size: 1.4em !important;
 }
 
 .tab-link {
   font-size: 0.7em;
-  color: grey;
+  color: var(--dark-gray);
   padding: 8px;
+  cursor: pointer;
 }
 
 .circle-icon {
   font-size: 0.5em !important;
-  color: grey;
+  color: var(--dark-gray);
 }
 
 .onboarding-text {
@@ -188,12 +211,12 @@
 }
 
 .sb-logo {
-  width: 150px;
-  height: 30px;
+  height: 20px;
   position: absolute;
   bottom: 0;
   justify-content: center;
   transform: translate(-50%, -50%);
+  padding-bottom: 22px;
 }
 
 .onboarding-bottom {
@@ -205,6 +228,7 @@
 .quick-click-button-room,
 .metric-button {
   color: white;
+  background-color: white;
   border: none;
   border-radius: 7px;
   width: 275px;
@@ -217,10 +241,11 @@
 
 .metric-button {
   height: 170px;
+  cursor: default;
 }
 
 .quick-click-button-room {
-  background-color: green;
+  background-color: var(--lime-green);
 }
 
 .quick-button-section,
@@ -231,7 +256,7 @@
 
 .quick-click-icon,
 .quick-click-icon-room {
-  color: green;
+  color: var(--lime-green);
   font-size: 2.7em !important;
 }
 
@@ -242,34 +267,41 @@
 .quick-button-text,
 .metric-button-text,
 .metric-button-text-2 {
-  color: black;
-  font-size: 1.2em;
+  color: var(--dark-green);
+  font-size: 1.15em;
+  font-family: "Comfortaa", sans-serif;
 }
 
 .metric-button-text {
-  font-size: 3em;
+  font-size: 3.5em;
   margin-bottom: 10px;
   margin-top: 10px;
+  font-family: "Comfortaa", sans-serif;
 }
 
 .quick-button-text-room {
-  font-size: 1.2em;
+  font-size: 1.15em;
+  font-family: "Comfortaa", sans-serif;
 }
 
 .metric-text {
-  color: black;
+  color: var(--dark-green);
   padding-top: 20px;
   padding-left: 20px;
   text-align: left;
+  font-size: 1.2em;
+  font-family: "Comfortaa", sans-serif;
+  margin: 0px;
+  font-weight: 500;
 }
 
 .patent-notice {
-  padding: 50px;
-  color: grey;
+  padding: 40px 50px 60px 50px;
+  color: var(--light-gray);
 }
 
 .beta-img {
-  width: 70px;
+  width: 50px;
   position: absolute;
   bottom: 0;
   justify-content: center;
@@ -278,18 +310,40 @@
 
 .beta-section {
   position: relative;
-  height: 100px;
+  height: 70px;
 }
 
 .link-button {
   border: 1px;
-  width: 300px;
+  width: auto;
   height: 50px;
-  border-radius: 20px;
-  background-color: green;
+  border-radius: 100px;
+  background-color: var(--dark-gray);
   color: white;
+  font-family: "Comfortaa", sans-serif;
+  padding: 0px 25px 0px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .link-section {
-  padding-top: 40px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-icon {
+  padding-left: 10px;
+}
+
+.logout-button {
+  border: none;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
 }

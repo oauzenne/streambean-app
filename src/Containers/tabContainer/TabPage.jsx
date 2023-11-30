@@ -6,33 +6,39 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import LogoutIcon from "@mui/icons-material/Logout";
 import CopyrightIcon from "@mui/icons-material/Copyright";
-import Link from '@mui/material/Link';
-import CircleIcon from '@mui/icons-material/Circle';
+import Link from "@mui/material/Link";
+import CircleIcon from "@mui/icons-material/Circle";
+import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
+import SmartToyOutlinedIcon from "@mui/icons-material/SmartToyOutlined";
+import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import ImportContactsOutlinedIcon from "@mui/icons-material/ImportContactsOutlined";
+import BugReportOutlinedIcon from "@mui/icons-material/BugReportOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 const buttons = [
   {
     text: "Command Center",
-    icon: <AdbIcon className="button-icon" />,
+    icon: <DashboardOutlinedIcon className="button-icon" />,
   },
   {
     text: "AI Assistant",
-    icon: <AdbIcon className="button-icon" />,
+    icon: <SmartToyOutlinedIcon className="button-icon" />,
   },
   {
     text: "Payments",
-    icon: <AdbIcon className="button-icon" />,
+    icon: <MonetizationOnOutlinedIcon className="button-icon" />,
   },
   {
     text: "Contacts",
-    icon: <AdbIcon className="button-icon" />,
+    icon: <ImportContactsOutlinedIcon className="button-icon" />,
   },
   {
     text: "Settings",
-    icon: <AdbIcon className="button-icon" />,
+    icon: <SettingsOutlinedIcon className="button-icon" />,
   },
   {
     text: "Report a Bug",
-    icon: <AdbIcon className="button-icon" />,
+    icon: <BugReportOutlinedIcon className="button-icon" />,
   },
 ];
 
@@ -59,9 +65,9 @@ const TabPage = () => {
 
       <section>
         <div className="logout-section">
-          <Button>
-            <LogoutIcon className="logout-icon" />{" "}
+          <Button class="logout-button">
             <Typography class="logout-text">Log Out</Typography>
+            <LogoutIcon className="logout-icon" />{" "}
           </Button>
         </div>
         <div className="copyright-section">
@@ -69,8 +75,10 @@ const TabPage = () => {
           <Typography class="copyright-text">2023 Stream Bean AI</Typography>
         </div>
         <div>
-          <Link class="tab-link">Privacy</Link> <CircleIcon className="circle-icon"/>
-          <Link class="tab-link">Terms</Link> <CircleIcon className="circle-icon"/>
+          <Link class="tab-link">Privacy</Link>{" "}
+          <CircleIcon className="circle-icon" />
+          <Link class="tab-link">Terms</Link>{" "}
+          <CircleIcon className="circle-icon" />
           <Link class="tab-link">Contact</Link>
         </div>
       </section>

@@ -6,7 +6,7 @@ import StepLabel from "@mui/material/StepLabel";
 import StepContent from "@mui/material/StepContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Graphic from "../../Images/onboarding-graphic.png";
+import Graphic from "../../Images/onboarding-graphic.jpg";
 import "./Onboarding.css";
 
 const steps = [

@@ -2,25 +2,29 @@ import React from "react";
 import "../../Styles/DashboardPage.css";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import AdbIcon from "@mui/icons-material/Adb";
 import BetaImg from "../../Images/beta-img.png";
+import MeetingRoomOutlinedIcon from "@mui/icons-material/MeetingRoomOutlined";
+import LocalAtmOutlinedIcon from "@mui/icons-material/LocalAtmOutlined";
+import PersonAddAltOutlinedIcon from "@mui/icons-material/PersonAddAltOutlined";
+import ContentCopyOutlinedIcon from "@mui/icons-material/ContentCopyOutlined";
+import PsychologyAltOutlinedIcon from "@mui/icons-material/PsychologyAltOutlined";
 
 const quickButtons = [
   {
     text: "Open Room",
-    icon: <AdbIcon className="quick-click-icon-room" />,
+    icon: <MeetingRoomOutlinedIcon className="quick-click-icon-room" />,
   },
   {
     text: "View Payments",
-    icon: <AdbIcon className="quick-click-icon" />,
+    icon: <LocalAtmOutlinedIcon className="quick-click-icon" />,
   },
   {
     text: "Add Contact",
-    icon: <AdbIcon className="quick-click-icon" />,
+    icon: <PersonAddAltOutlinedIcon className="quick-click-icon" />,
   },
   {
     text: "Ask AI",
-    icon: <AdbIcon className="quick-click-icon" />,
+    icon: <PsychologyAltOutlinedIcon className="quick-click-icon" />,
   },
 ];
 
@@ -35,7 +39,7 @@ const metricButtons = [
   },
   {
     text: 191,
-    subtext: "Beta Meetings",
+    subtext: "Beta Minutes",
   },
   {
     text: 50,
@@ -79,11 +83,11 @@ const ContentPage = () => {
           )
         )}
       </section>
-      <Typography className="metric-text">Monthly Metrics</Typography>
+      <Typography class="metric-text">Monthly Metrics</Typography>
 
       <section className="metrics-section">
         {metricButtons.map((button) => (
-          <Button aria-label="Add" class="metric-button">
+          <Button disabled aria-label="Add" class="metric-button">
             <Typography variant="body2" class="metric-button-text">
               {button.text}
             </Typography>{" "}
@@ -94,7 +98,10 @@ const ContentPage = () => {
         ))}
       </section>
       <section className="link-section">
-        <Button class="link-button">meet.streambean.ai/TheManifestCodex</Button>
+        <Button class="link-button">
+          meet.streambean.ai/TheManifestCodex{" "}
+          <ContentCopyOutlinedIcon className="link-icon" />{" "}
+        </Button>
       </section>
       <section className="patent-notice">
         <Typography>

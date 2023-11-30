@@ -6,16 +6,16 @@
 }
 
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
-  color: green !important;
+  color: #6fb204 !important;
 }
 
 .css-1f5ro5o-MuiButtonBase-root-MuiButton-root {
-  background-color: green !important;
+  background-color: #0f391f !important;
   border-radius: 20px !important;
 }
 
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
-  color: green !important;
+  color: #0f391f !important;
 }
 
 .css-18st3fs-MuiButtonBase-root-MuiButton-root {
@@ -28,4 +28,26 @@
   margin-bottom: 30px;
   margin-top: 20px;
   max-width: 100%;
+}
+
+.css-ahj2mt-MuiTypography-root {
+  font-family: "Comfortaa", sans-serif !important;
+  color: #9e9e9e;
+  font-size: 0.9em !important;
+}
+
+.css-1hv8oq8-MuiStepLabel-label.Mui-active {
+  font-family: "Comfortaa", sans-serif !important;
+}
+
+.css-1hv8oq8-MuiStepLabel-label {
+  font-family: "Comfortaa", sans-serif !important;
+}
+
+.css-1f5ro5o-MuiButtonBase-root-MuiButton-root {
+  font-family: "Comfortaa", sans-serif !important;
+}
+
+.css-1sn4lm3-MuiTypography-root {
+  font-family: "Comfortaa", sans-serif !important;
 }
