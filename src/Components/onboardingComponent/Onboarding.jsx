@@ -31,6 +31,9 @@ export default function VerticalLinearStepper() {
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
+ const handleFinish = () => {
+    console.log("whats up")
+  };
   return (
     <section>
       <Box sx={{ maxWidth: 400 }} className="onboarding-section">
@@ -50,12 +53,27 @@ export default function VerticalLinearStepper() {
                 <Typography>{step.description}</Typography>
                 <Box sx={{ mb: 2 }}>
                   <div>
-                    <Button
+                    {index === steps.length - 1 ? (
+                      <Button
+                        variant="contained"
+                          onClick={handleFinish}
+                        sx={{ mt: 1, mr: 1 }}>
+                        Finish
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="contained"
+                        onClick={handleNext}
+                        sx={{ mt: 1, mr: 1 }}>
+                        Continue
+                      </Button>
+                    )}
+                    {/* <Button
                       variant="contained"
                       onClick={handleNext}
                       sx={{ mt: 1, mr: 1 }}>
                       {index === steps.length - 1 ? "Finish" : "Continue"}
-                    </Button>
+                    </Button> */}
                   </div>
                 </Box>
               </StepContent>
