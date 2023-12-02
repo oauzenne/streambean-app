@@ -9,7 +9,7 @@ const SideBarPage = () => {
       <section className="onboarding-top">
         <text className="onboarding-text">Onboarding Center</text>
       </section>
-      <section>
+      <section className="onboarding-middle">
         <Onboarding />
       </section>
       <section className="onboarding-bottom">

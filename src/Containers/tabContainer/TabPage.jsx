@@ -45,7 +45,7 @@ const buttons = [
 const TabPage = () => {
   return (
     <div className="tab-container">
-      <section>
+      <section className="top-tab">
         <img src={SBLogo} className="logo" alt="streambean logo" />
         <h3 className="username">Olivia Young</h3>
         <h4 className="companyname">The Manifest Codex</h4>

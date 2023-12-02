@@ -16,15 +16,20 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  padding-top: 3%;
+}
+
+.top-tab {
+  flex: 1;
+  flex-basis: 33%;
+  margin-top: 15%;
 }
 
 .content-container {
   width: 55%;
   background-color: var(--light-gray);
-  padding: 3%;
   display: flex;
   flex-direction: column;
+  padding: 0px 20px 0px 20px;
 }
 
 .sidebar-container {
@@ -32,7 +37,6 @@
   display: flex;
   flex-direction: column;
   width: 25%;
-  padding-top: 3%;
 }
 
 html,
@@ -83,6 +87,9 @@ body,
   display: flex;
   width: 100%;
   margin-top: 15px;
+  flex: 1;
+  flex-basis: 14%;
+  margin-top: 7%;
 }
 
 .top-left {
@@ -123,6 +130,8 @@ body,
   flex-direction: column;
   align-items: center;
   padding: 0px 20px 0px 20px;
+  flex: 1;
+  flex-basis: 33%;
 }
 
 .rounded-rectangle-button {
@@ -171,8 +180,10 @@ body,
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 20%;
   width: 100%;
+  flex: 1;
+  flex-basis: 33%;
+  margin-bottom: 15%;
 }
 
 .copyright-section {
@@ -225,7 +236,18 @@ body,
 
 .onboarding-top {
   text-align: left;
-  margin-left: 25px;
+  flex: 1;
+  flex-basis: 5%;
+  margin-top: 15%;
+  justify-content: center;
+  display: flex;
+}
+
+.onboarding-middle {
+  flex: 1;
+  flex-basis: 61%;
+  justify-content: center;
+  display: flex;
 }
 
 .sb-logo {
@@ -236,13 +258,16 @@ body,
 
 .onboarding-bottom {
   bottom: 0;
-  padding-bottom: 22px;
+  margin-bottom: 10%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  height: 18%;
+  height: 30%;
+  position: sticky;
+  flex: 1;
+  flex-basis: 33%;
 }
 
 .quick-click-button,
@@ -257,6 +282,7 @@ body,
   margin: 20px;
   box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.11);
   cursor: pointer;
+  margin-top: 0px;
 }
 
 .metric-button {
@@ -272,6 +298,9 @@ body,
 .metrics-section {
   display: flex;
   justify-content: space-between;
+  flex: 1;
+  flex-basis: 15%;
+  margin-top: 2%;
 }
 
 .quick-click-icon,
@@ -306,22 +335,27 @@ body,
 
 .metric-text {
   color: var(--dark-green);
-  padding-top: 5%;
-  padding-left: 20px;
   text-align: left;
   font-size: 1.2em;
   font-family: "Comfortaa", sans-serif;
   margin: 0px;
   font-weight: 700;
+  flex: 1;
+  flex-basis: 5%;
+  margin-left: 20px;
+  margin-top: 30px;
 }
 
 .patent-notice {
-  padding: 30px 50px 0px 50px;
   color: var(--light-gray);
+  flex: 1;
+  flex-basis: 24%;
+  margin-top: 5%;
 }
 
 .beta-img {
-  width: 50px;
+  width: 35px;
+  height: 30px;
   bottom: 0;
   display: flex;
 }
@@ -329,9 +363,11 @@ body,
 .beta-section {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  height: 10%;
   width: 100%;
+  flex: 1;
+  flex-basis: 13%;
+  align-items: flex-end;
+  margin-bottom: 5%;
 }
 
 .link-button {
@@ -350,11 +386,12 @@ body,
 }
 
 .link-section {
-  padding-top: 7%;
-  padding-bottom: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
+  flex-basis: 14%;
+  margin-top: 5%;
 }
 
 .link-icon {
