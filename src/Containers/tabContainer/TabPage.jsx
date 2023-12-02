@@ -63,7 +63,7 @@ const TabPage = () => {
         ))}
       </section>
 
-      <section>
+      <section className="logout-container">
         <div className="logout-section">
           <Button class="logout-button">
             <Typography class="logout-text">Log Out</Typography>

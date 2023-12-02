@@ -6,31 +6,42 @@
   --light-gray: #f4f4f4;
   --dark-gray: #9e9e9e;
 }
-
 .dashboard-container {
   display: flex;
   flex-direction: row;
-  height: 100vh;
-  width: 100vw;
 }
 
 .tab-container {
   width: 20%;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3%;
 }
 
 .content-container {
-  width: 64%;
+  width: 55%;
   background-color: var(--light-gray);
-  padding-top: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-container {
   background-color: var(--dark-green);
   display: flex;
   flex-direction: column;
+  width: 25%;
+  padding-top: 3%;
+}
+
+html,
+body,
+.dashboard-container,
+.tab-container,
+.content-container,
+.sidebar-container {
+  margin: 0;
   height: 100vh;
 }
 
@@ -71,6 +82,7 @@
 .top-section {
   display: flex;
   width: 100%;
+  margin-top: 15px;
 }
 
 .top-left {
@@ -88,7 +100,6 @@
 .logo {
   width: 100px;
   height: 100px;
-  margin-top: 52px;
 }
 
 .username {
@@ -106,7 +117,7 @@
 }
 
 .button-section {
-  margin-top: 40px;
+  margin-top: 10%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -152,7 +163,16 @@
   align-items: center;
   justify-content: center;
   color: var(--dark-gray);
-  padding-top: 170px;
+}
+
+.logout-container {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 20%;
+  width: 100%;
 }
 
 .copyright-section {
@@ -204,24 +224,25 @@
 }
 
 .onboarding-top {
-  margin: 20px;
-  margin-top: 40px;
   text-align: left;
   margin-left: 25px;
 }
 
 .sb-logo {
   height: 20px;
-  position: absolute;
   bottom: 0;
-  justify-content: center;
-  transform: translate(-50%, -50%);
-  padding-bottom: 22px;
+  display: flex;
 }
 
 .onboarding-bottom {
-  align-items: flex-end;
-  justify-content: center;
+  bottom: 0;
+  padding-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 18%;
 }
 
 .quick-click-button,
@@ -232,16 +253,15 @@
   border: none;
   border-radius: 20px;
   width: 275px;
-  height: 150px;
+  height: 90%;
   margin: 20px;
-  flex-shrink: 1;
   box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.11);
   cursor: pointer;
 }
 
 .metric-button {
-  height: 170px;
   cursor: default;
+  margin-top: 2%;
 }
 
 .quick-click-button-room {
@@ -268,7 +288,7 @@
 .metric-button-text,
 .metric-button-text-2 {
   color: var(--dark-green);
-  font-size: 1.15em;
+  font-size: 1em;
   font-family: "Comfortaa", sans-serif;
 }
 
@@ -280,37 +300,38 @@
 }
 
 .quick-button-text-room {
-  font-size: 1.15em;
+  font-size: 1em;
   font-family: "Comfortaa", sans-serif;
 }
 
 .metric-text {
   color: var(--dark-green);
-  padding-top: 20px;
+  padding-top: 5%;
   padding-left: 20px;
   text-align: left;
   font-size: 1.2em;
   font-family: "Comfortaa", sans-serif;
   margin: 0px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .patent-notice {
-  padding: 40px 50px 60px 50px;
+  padding: 30px 50px 0px 50px;
   color: var(--light-gray);
 }
 
 .beta-img {
   width: 50px;
-  position: absolute;
   bottom: 0;
-  justify-content: center;
-  transform: translate(-50%, -50%);
+  display: flex;
 }
 
 .beta-section {
-  position: relative;
-  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 10%;
+  width: 100%;
 }
 
 .link-button {
@@ -329,7 +350,8 @@
 }
 
 .link-section {
-  padding-top: 50px;
+  padding-top: 7%;
+  padding-bottom: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
