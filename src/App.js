@@ -1,11 +1,20 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./Containers/dashboardContainer/DashboardPage.jsx";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
-    <div className="App">
-      <Dashboard />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </Provider>
   );
 }
 

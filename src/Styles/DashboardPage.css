@@ -356,9 +356,15 @@ body,
 
 .beta-img {
   width: 35px;
-  height: 30px;
+  height: 25px;
   bottom: 0;
   display: flex;
+}
+
+.command-div {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .beta-section {

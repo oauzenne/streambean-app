@@ -1,7 +1,6 @@
 import React from "react";
 import SBLogo from "../../Images/green-logo.png";
 import "../../Styles/DashboardPage.css";
-import AdbIcon from "@mui/icons-material/Adb";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -14,35 +13,80 @@ import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlin
 import ImportContactsOutlinedIcon from "@mui/icons-material/ImportContactsOutlined";
 import BugReportOutlinedIcon from "@mui/icons-material/BugReportOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-
-const buttons = [
-  {
-    text: "Command Center",
-    icon: <DashboardOutlinedIcon className="button-icon" />,
-  },
-  {
-    text: "AI Assistant",
-    icon: <SmartToyOutlinedIcon className="button-icon" />,
-  },
-  {
-    text: "Payments",
-    icon: <MonetizationOnOutlinedIcon className="button-icon" />,
-  },
-  {
-    text: "Contacts",
-    icon: <ImportContactsOutlinedIcon className="button-icon" />,
-  },
-  {
-    text: "Settings",
-    icon: <SettingsOutlinedIcon className="button-icon" />,
-  },
-  {
-    text: "Report a Bug",
-    icon: <BugReportOutlinedIcon className="button-icon" />,
-  },
-];
+import { useDispatch } from "react-redux";
+import {
+  showCommandCenterContainer,
+  showAIAssistantContainer,
+  showPaymentsContainer,
+  showContactsContainer,
+  showSettingsContainer,
+  showReportBugContainer,
+} from "../../actions.js";
 
 const TabPage = () => {
+  const dispatch = useDispatch();
+
+  const handleShowCommandCenterContainer = () => {
+    dispatch(showCommandCenterContainer());
+  };
+
+  const handleShowPaymentsContainer = () => {
+    dispatch(showPaymentsContainer());
+  };
+
+  const handleShowContactsContainer = () => {
+    dispatch(showContactsContainer());
+  };
+
+  const handleShowSettingsContainer = () => {
+    dispatch(showSettingsContainer());
+  };
+
+  const handleShowReportBugContainer = () => {
+    dispatch(showReportBugContainer());
+  };
+
+  const handleShowAIAssistantContainer = () => {
+    dispatch(showAIAssistantContainer());
+  };
+
+  const showContainer = (cont) => {
+    if (cont === "command center") {
+      handleShowCommandCenterContainer();
+    } else if (cont === "ai assistant") {
+      handleShowAIAssistantContainer();
+    }
+  };
+
+  const buttons = [
+    {
+      text: "Command Center",
+      icon: <DashboardOutlinedIcon className="button-icon" />,
+      container: "command center",
+    },
+    {
+      text: "AI Assistant",
+      icon: <SmartToyOutlinedIcon className="button-icon" />,
+      container: "ai assistant",
+    },
+    {
+      text: "Payments",
+      icon: <MonetizationOnOutlinedIcon className="button-icon" />,
+    },
+    {
+      text: "Contacts",
+      icon: <ImportContactsOutlinedIcon className="button-icon" />,
+    },
+    {
+      text: "Settings",
+      icon: <SettingsOutlinedIcon className="button-icon" />,
+    },
+    {
+      text: "Report a Bug",
+      icon: <BugReportOutlinedIcon className="button-icon" />,
+    },
+  ];
+
   return (
     <div className="tab-container">
       <section className="top-tab">
@@ -53,7 +97,10 @@ const TabPage = () => {
 
       <section className="button-section">
         {buttons.map((button) => (
-          <Button aria-label="Add" class="rounded-rectangle-button">
+          <Button
+            onClick={() => showContainer(button.container)}
+            aria-label="Add"
+            class="rounded-rectangle-button">
             {" "}
             {button.icon}{" "}
             <Typography variant="body2" class="button-text">
