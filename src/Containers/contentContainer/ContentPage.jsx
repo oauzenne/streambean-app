@@ -7,13 +7,17 @@ import Contacts from "../../Containers/subContainers/contactsContainer/ContactsP
 import Payments from "../../Containers/subContainers/paymentsContainer/PaymentsPage.jsx";
 import ReportBug from "../../Containers/subContainers/reportBugContainer/ReportBugPage.jsx";
 import Settings from "../../Containers/subContainers/settingsContainer/SettingsPage.jsx";
-import MeetingRoom from "../../Containers/subContainers/meetingRoomContainer/MeetingRoomPage.jsx"
+import MeetingRoom from "../../Containers/subContainers/meetingRoomContainer/MeetingRoomPage.jsx";
 
-
-const ContentPage = () => {
+const ContentPage = (props) => {
   const showContainer = useSelector((state) => state.container.showContainer);
   return (
-    <div className="content-container">
+    <div
+      className={
+        props.onboardingStatus === false
+          ? "content-container"
+          : "content-container-large"
+      }>
       {showContainer === "commandCenterMainContainer" && <MainCommandCenter />}
       {showContainer === "aiAssistantContainer" && <AIAssistant />}
       {showContainer === "contactsContainer" && <Contacts />}
@@ -21,7 +25,6 @@ const ContentPage = () => {
       {showContainer === "reportBugContainer" && <ReportBug />}
       {showContainer === "settingsContainer" && <Settings />}
       {showContainer === "meetingRoomContainer" && <MeetingRoom />}
-
     </div>
   );
 };

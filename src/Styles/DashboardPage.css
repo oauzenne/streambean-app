@@ -25,7 +25,8 @@
   margin-top: 15%;
 }
 
-.content-container {
+.content-container,
+.content-container-large {
   flex: 1;
   flex-basis: 55%;
   background-color: var(--light-gray);
@@ -40,6 +41,10 @@
   flex-direction: column;
   flex: 1;
   flex-basis: 25%;
+}
+
+.content-container-large {
+  flex-basis: 80%;
 }
 
 html,

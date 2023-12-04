@@ -3,15 +3,15 @@ import "../../Styles/DashboardPage.css";
 import Onboarding from "../../Components/onboardingComponent/Onboarding";
 import SBLogo from "../../Images/sb-logo.png";
 
-const SideBarPage = () => {
+const SideBarPage = (props) => {
   const [finishClick, setFinishClick] = React.useState(false);
 
   const handleFinishClickUpdate = (finishClick) => {
     setFinishClick(finishClick);
+    props.onboardingStatus(finishClick);
   };
 
-return (
-  finishClick === false ? (
+  return finishClick === false ? (
     <div className="sidebar-container">
       <section className="onboarding-top">
         <text className="onboarding-text">Onboarding Center</text>
@@ -23,8 +23,9 @@ return (
         <img src={SBLogo} className="sb-logo" alt="SB Logo" />
       </section>
     </div>
-  ) : <div className="hide"/>
-);
+  ) : (
+    <div className="hide" />
+  );
 };
 
 export default SideBarPage;

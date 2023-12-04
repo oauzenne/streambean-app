@@ -59,7 +59,6 @@ export default function VerticalLinearStepper(props) {
                       <Button
                         variant="contained"
                         onClick={handleFinishClick}
-                        // value={finishClick}
                         sx={{ mt: 1, mr: 1 }}>
                         Finish
                       </Button>
