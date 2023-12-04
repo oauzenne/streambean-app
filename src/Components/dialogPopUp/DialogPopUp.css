@@ -1,0 +1,11 @@
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  color: white !important;
+  background: #6fb204 !important;
+  border-radius: 20px !important;
+  width: 20% !important;
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  border-radius: 20px;
+  padding: 10px;
+}

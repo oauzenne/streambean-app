@@ -11,7 +11,6 @@ import Settings from "../../Containers/subContainers/settingsContainer/SettingsP
 
 const ContentPage = () => {
   const showContainer = useSelector((state) => state.container.showContainer);
-  console.log(showContainer);
   return (
     <div className="content-container">
       {showContainer === "commandCenterMainContainer" && <MainCommandCenter />}

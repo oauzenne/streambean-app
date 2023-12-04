@@ -1,0 +1,23 @@
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  color: white !important;
+  background: #6fb204 !important;
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  border-radius: 20px !important;
+}
+
+.css-sghohy-MuiButtonBase-root-MuiButton-root {
+  background: #0f391f !important;
+  color: white !important;
+  margin-top: 20px !important;
+  border-radius: 20px !important;
+  display: flex !important;
+  height: 50px !important;
+  width: 100% !important;
+}
+
+.css-qfso29-MuiTypography-root-MuiDialogContentText-root {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SBLogo from "../../Images/green-logo.png";
 import "../../Styles/DashboardPage.css";
 import Button from "@mui/material/Button";
@@ -22,6 +22,7 @@ import {
   showSettingsContainer,
   showReportBugContainer,
 } from "../../actions.js";
+import DialogPopUp from "../../Components/dialogPopUp/DialogPopUp.jsx";
 
 const TabPage = () => {
   const dispatch = useDispatch();
@@ -64,6 +65,19 @@ const TabPage = () => {
     } else if (cont === "report bug") {
       handleShowReportBugContainer();
     }
+  };
+
+  const [openDialog, setOpenDialog] = useState(false);
+
+  const [tabText, setTabText] = useState(null);
+
+  const handleLinkClick = (text) => {
+    setOpenDialog(true);
+    setTabText(text)
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
   };
 
   const buttons = [
@@ -134,11 +148,18 @@ const TabPage = () => {
           <Typography class="copyright-text">2023 Stream Bean AI</Typography>
         </div>
         <div>
-          <Link class="tab-link">Privacy</Link>{" "}
+          <Link class="tab-link" onClick={() => handleLinkClick("Privacy")}>
+            Privacy
+          </Link>{" "}
           <CircleIcon className="circle-icon" />
-          <Link class="tab-link">Terms</Link>{" "}
+          <Link class="tab-link" onClick={() => handleLinkClick("Terms")}>
+            Terms
+          </Link>{" "}
           <CircleIcon className="circle-icon" />
-          <Link class="tab-link">Contact</Link>
+          <Link class="tab-link" onClick={() => handleLinkClick("Contact")}>
+            Contact
+          </Link>
+          <DialogPopUp isOpen={openDialog} handleClose={handleCloseDialog} tabText={tabText} />
         </div>
       </section>
     </div>
