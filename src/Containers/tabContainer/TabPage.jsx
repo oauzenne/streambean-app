@@ -73,7 +73,7 @@ const TabPage = () => {
 
   const handleLinkClick = (text) => {
     setOpenDialog(true);
-    setTabText(text)
+    setTabText(text);
   };
 
   const handleCloseDialog = () => {
@@ -83,7 +83,7 @@ const TabPage = () => {
   const buttons = [
     {
       text: "Command Center",
-      icon: <DashboardOutlinedIcon className="button-icon" />,
+      icon: <DashboardOutlinedIcon className="button-icon-green" />,
       container: "command center",
     },
     {
@@ -122,18 +122,31 @@ const TabPage = () => {
       </section>
 
       <section className="button-section">
-        {buttons.map((button) => (
-          <Button
-            onClick={() => showContainer(button.container)}
-            aria-label="Add"
-            class="rounded-rectangle-button">
-            {" "}
-            {button.icon}{" "}
-            <Typography variant="body2" class="button-text">
-              {button.text}
-            </Typography>{" "}
-          </Button>
-        ))}
+        {buttons.map((button) =>
+          button.text === "Command Center" ? (
+            <Button
+              onClick={() => showContainer(button.container)}
+              aria-label="Add"
+              class="rounded-rectangle-button-green">
+              {" "}
+              {button.icon}{" "}
+              <Typography variant="body2" class="button-text-green">
+                {button.text}
+              </Typography>{" "}
+            </Button>
+          ) : (
+            <Button
+              onClick={() => showContainer(button.container)}
+              aria-label="Add"
+              class="rounded-rectangle-button">
+              {" "}
+              {button.icon}{" "}
+              <Typography variant="body2" class="button-text">
+                {button.text}
+              </Typography>{" "}
+            </Button>
+          )
+        )}
       </section>
 
       <section className="logout-container">
@@ -159,7 +172,11 @@ const TabPage = () => {
           <Link class="tab-link" onClick={() => handleLinkClick("Contact")}>
             Contact
           </Link>
-          <DialogPopUp isOpen={openDialog} handleClose={handleCloseDialog} tabText={tabText} />
+          <DialogPopUp
+            isOpen={openDialog}
+            handleClose={handleCloseDialog}
+            tabText={tabText}
+          />
         </div>
       </section>
     </div>

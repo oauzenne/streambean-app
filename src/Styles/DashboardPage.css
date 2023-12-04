@@ -134,7 +134,8 @@ body,
   flex-basis: 33%;
 }
 
-.rounded-rectangle-button {
+.rounded-rectangle-button,
+.rounded-rectangle-button-green {
   background-color: var(--light-gray);
   background-color: var(--light-gray);
   padding: 20px;
@@ -149,14 +150,24 @@ body,
   max-width: 100%;
 }
 
-.button-icon {
+.rounded-rectangle-button-green {
+  background-color: var(--dark-green);
+  color: white;
+}
+
+.button-icon, .button-icon-green {
   width: 25px;
   height: 25px;
   display: flex;
   color: var(--dark-green);
 }
 
-.button-text {
+.button-icon-green {
+  color: white;
+}
+
+.button-text,
+.button-text-green {
   color: var(--dark-green);
   display: flex;
   font-size: 1.1em;
@@ -164,6 +175,10 @@ body,
   padding-left: 10px;
   max-width: 100%;
   color: var(--dark-green);
+}
+
+.button-text-green {
+  color: white;
 }
 
 .logout-section {
