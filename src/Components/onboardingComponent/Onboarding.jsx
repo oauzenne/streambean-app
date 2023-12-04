@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -25,14 +25,16 @@ const steps = [
   },
 ];
 
-export default function VerticalLinearStepper() {
+export default function VerticalLinearStepper(props) {
   const [activeStep, setActiveStep] = React.useState(0);
+  const [finishClick, setFinishClick] = React.useState(false);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
-  const handleFinish = () => {
-    console.log("whats up");
+  const handleFinishClick = () => {
+    setFinishClick(true);
+    props.handleFinishClickUpdate(true);
   };
   return (
     <section>
@@ -56,7 +58,8 @@ export default function VerticalLinearStepper() {
                     {index === steps.length - 1 ? (
                       <Button
                         variant="contained"
-                        onClick={handleFinish}
+                        onClick={handleFinishClick}
+                        // value={finishClick}
                         sx={{ mt: 1, mr: 1 }}>
                         Finish
                       </Button>

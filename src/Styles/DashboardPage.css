@@ -12,7 +12,8 @@
 }
 
 .tab-container {
-  width: 20%;
+  flex: 1;
+  flex-basis: 25%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -25,7 +26,8 @@
 }
 
 .content-container {
-  width: 55%;
+  flex: 1;
+  flex-basis: 55%;
   background-color: var(--light-gray);
   display: flex;
   flex-direction: column;
@@ -36,7 +38,8 @@
   background-color: var(--dark-green);
   display: flex;
   flex-direction: column;
-  width: 25%;
+  flex: 1;
+  flex-basis: 25%;
 }
 
 html,
@@ -155,7 +158,8 @@ body,
   color: white;
 }
 
-.button-icon, .button-icon-green {
+.button-icon,
+.button-icon-green {
   width: 25px;
   height: 25px;
   display: flex;
@@ -427,4 +431,8 @@ body,
   flex-direction: row;
   align-items: center;
   cursor: pointer;
+}
+
+.hide {
+  display: none;
 }
