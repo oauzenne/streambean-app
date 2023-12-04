@@ -55,6 +55,14 @@ const TabPage = () => {
       handleShowCommandCenterContainer();
     } else if (cont === "ai assistant") {
       handleShowAIAssistantContainer();
+    } else if (cont === "payments") {
+      handleShowPaymentsContainer();
+    } else if (cont === "contacts") {
+      handleShowContactsContainer();
+    } else if (cont === "settings") {
+      handleShowSettingsContainer();
+    } else if (cont === "report bug") {
+      handleShowReportBugContainer();
     }
   };
 
@@ -72,18 +80,22 @@ const TabPage = () => {
     {
       text: "Payments",
       icon: <MonetizationOnOutlinedIcon className="button-icon" />,
+      container: "payments",
     },
     {
       text: "Contacts",
       icon: <ImportContactsOutlinedIcon className="button-icon" />,
+      container: "contacts",
     },
     {
       text: "Settings",
       icon: <SettingsOutlinedIcon className="button-icon" />,
+      container: "settings",
     },
     {
       text: "Report a Bug",
       icon: <BugReportOutlinedIcon className="button-icon" />,
+      container: "report bug",
     },
   ];
 

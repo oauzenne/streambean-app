@@ -4,7 +4,7 @@ const initialState = {
 
 export const containerReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "SHOW_COMMAND'":
+    case "SHOW_COMMAND":
       return { ...state, showContainer: "commandCenterMainContainer" };
     case "SHOW_AI":
       return { ...state, showContainer: "aiAssistantContainer" };
