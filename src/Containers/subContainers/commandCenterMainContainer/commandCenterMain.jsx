@@ -18,6 +18,7 @@ import {
 } from "../../../actions.js";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
+import CopyButton from "../../../Components/copyButton/CopyButton.jsx";
 
 const quickButtons = [
   {
@@ -168,10 +169,10 @@ const CommandCenterMain = () => {
         ))}
       </section>
       <section className="link-section">
-        <Button class="link-button">
-          meet.streambean.ai/TheManifestCodex{" "}
-          <ContentCopyOutlinedIcon className="link-icon" />{" "}
-        </Button>
+        <CopyButton
+          class="link-button"
+          textToCopy="meet.streambean.ai/TheManifestCodex"
+        />
       </section>
       <section className="patent-notice">
         <Typography>
