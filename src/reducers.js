@@ -16,6 +16,8 @@ export const containerReducer = (state = initialState, action) => {
       return { ...state, showContainer: "settingsContainer" };
     case "SHOW_REPORT_BUG":
       return { ...state, showContainer: "reportBugContainer" };
+     case "SHOW_MEETING":
+      return { ...state, showContainer: "meetingRoomContainer" };
     default:
       return state;
   }

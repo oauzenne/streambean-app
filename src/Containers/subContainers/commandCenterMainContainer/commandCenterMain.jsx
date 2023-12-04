@@ -8,22 +8,37 @@ import LocalAtmOutlinedIcon from "@mui/icons-material/LocalAtmOutlined";
 import PersonAddAltOutlinedIcon from "@mui/icons-material/PersonAddAltOutlined";
 import ContentCopyOutlinedIcon from "@mui/icons-material/ContentCopyOutlined";
 import PsychologyAltOutlinedIcon from "@mui/icons-material/PsychologyAltOutlined";
+import {
+  showCommandCenterContainer,
+  showAIAssistantContainer,
+  showPaymentsContainer,
+  showContactsContainer,
+  showSettingsContainer,
+  showReportBugContainer,
+} from "../../../actions.js";
+import { useDispatch } from "react-redux";
+import { useLocation } from "react-router-dom";
+
 const quickButtons = [
   {
     text: "Open Room",
     icon: <MeetingRoomOutlinedIcon className="quick-click-icon-room" />,
+    container: "open room",
   },
   {
     text: "View Payments",
     icon: <LocalAtmOutlinedIcon className="quick-click-icon" />,
+    container: "payments",
   },
   {
     text: "Add Contact",
     icon: <PersonAddAltOutlinedIcon className="quick-click-icon" />,
+    container: "contacts",
   },
   {
     text: "Ask AI",
     icon: <PsychologyAltOutlinedIcon className="quick-click-icon" />,
+    container: "ai assistant",
   },
 ];
 
@@ -45,7 +60,58 @@ const metricButtons = [
     subtext: "AI Credits",
   },
 ];
-const commandCenterMain = () => {
+
+const CommandCenterMain = () => {
+  const dispatch = useDispatch();
+
+  const handleShowCommandCenterContainer = () => {
+    dispatch(showCommandCenterContainer());
+  };
+
+  const handleShowPaymentsContainer = () => {
+    dispatch(showPaymentsContainer());
+  };
+
+  const handleShowContactsContainer = () => {
+    dispatch(showContactsContainer());
+  };
+
+  const handleShowSettingsContainer = () => {
+    dispatch(showSettingsContainer());
+  };
+
+  const handleShowReportBugContainer = () => {
+    dispatch(showReportBugContainer());
+  };
+
+  const handleShowAIAssistantContainer = () => {
+    dispatch(showAIAssistantContainer());
+  };
+
+  const location = useLocation();
+
+  function handleShowMeetingRoomContainer() {
+    const meetingPage = `/meetingroom`;
+    window.location.href = meetingPage;
+  }
+
+  const showContainer = (cont) => {
+    if (cont === "command center") {
+      handleShowCommandCenterContainer();
+    } else if (cont === "ai assistant") {
+      handleShowAIAssistantContainer();
+    } else if (cont === "payments") {
+      handleShowPaymentsContainer();
+    } else if (cont === "contacts") {
+      handleShowContactsContainer();
+    } else if (cont === "settings") {
+      handleShowSettingsContainer();
+    } else if (cont === "report bug") {
+      handleShowReportBugContainer();
+    } else if (cont === "open room") {
+      handleShowMeetingRoomContainer();
+    }
+  };
   return (
     <div className="command-div">
       <section className="top-section">
@@ -63,7 +129,10 @@ const commandCenterMain = () => {
       <section className="quick-button-section">
         {quickButtons.map((button) =>
           button.text === "Open Room" ? (
-            <Button aria-label="Add" class="quick-click-button-room">
+            <Button
+              onClick={() => showContainer(button.container)}
+              aria-label="Add"
+              class="quick-click-button-room">
               {" "}
               {button.icon}{" "}
               <Typography variant="body2" class="quick-button-text-room">
@@ -71,7 +140,10 @@ const commandCenterMain = () => {
               </Typography>{" "}
             </Button>
           ) : (
-            <Button aria-label="Add" class="quick-click-button">
+            <Button
+              onClick={() => showContainer(button.container)}
+              aria-label="Add"
+              class="quick-click-button">
               {" "}
               {button.icon}{" "}
               <Typography variant="body2" class="quick-button-text">
@@ -119,4 +191,4 @@ const commandCenterMain = () => {
   );
 };
 
-export default commandCenterMain;
+export default CommandCenterMain;

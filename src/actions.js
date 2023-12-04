@@ -21,3 +21,7 @@ export const showSettingsContainer = () => ({
 export const showReportBugContainer = () => ({
   type: "SHOW_REPORT_BUG",
 });
+
+export const showMeetingRoomContainer = () => ({
+  type: "SHOW_MEETING",
+});
